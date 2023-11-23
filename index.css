@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+/* :root , html */
+:root{
+    font-family: 'Poppins', sans-serif;
+    font-size : 62.5%;
+    /* color : #2f3640; */
+    /* color : white; */
+    color : black;
+}
+
+/* styling html basic elements  */
+ul li{
+    list-style: none;
+}
+
+p,li{
+    font-size: 1.6rem;
+    margin-bottom : .5em;
+    letter-spacing: .020em;
+}
+h1,h2,h3{
+    letter-spacing: .015em;
+    margin-bottom : .3em
+}
+
+a{
+    text-decoration: none;
+    color : black;
+}
+
+/* ##################### utility classes ############### */
+
+body{
+    width : 100%;
+    min-height : 100vh;
+    background-color: rgba(128, 128, 128, 0.126);
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+.container{
+    max-width : 1200px;
+    width : 85%;
+    margin : auto;
+    /* background-color: rgba(128, 128, 128, 0.126); */
+}
+
+.white{
+    color : white;
+}
+.bg-blue{
+    background-color: #40739e;
+}
+.black{
+    color : #2f3640;
+}
+.fw-400{
+    font-weight : 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-300{
+    font-weight: 300;
+}
+.text-center{
+    text-align: center;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+
+.lg-heading{
+    font-size: 5.2rem;
+}
+.md-heading{
+    font-size: 2.8rem;
+}
+.md-sm-heading{
+    font-size: 2.1rem;
+}
+.small-text{
+    font-size: 1.2rem;
+}
+.normal-text{
+    font-size: 1.6rem;
+}
+.purple{
+    color : #474787;
+}
+.bg-purple{
+    background-color: #474787;
+}
+.primary-btn{
+    /* padding: .6em 2em; */
+    display: inline-block;
+    background-color: #474787;
+    color : white;
+    border-radius: .5rem;
+    width : 12rem;
+    text-align: center;
+    padding : .6em 0;
+    font-weight: 300;
+}
+.secondary-btn{
+    display: inline-block;
+    border: 3px solid #474787;
+    /* background-color: #474787; */
+    color : white;
+    border-radius: .5rem;
+    width : 12rem;
+    text-align: center;
+    padding : .6em 0;
+    font-weight: 300;
+}
+/* styling begins here  */
+.nav-bar{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding : 2.5rem 0;
+    /* position: sticky; */
+    /* top : 0; */
+    /* background-color: ; */
+    /* background-color: rgba(128, 128, 128, 0.126); */
+}
+.nav-items{
+    display: flex;
+    align-items: center;
+    gap : 2.5rem;
+    transition: all .2s ease-in-out;
+    /* padding : 1em 0; */
+}
+.nav-items a:hover{
+    color : #474787;
+}
+
+
+.main-content{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height : 50rem;
+}
+.main-content .desc{
+    /* color : #474787; */
+    /* text-align: center; */
+}
+.main-content .box1{
+    width : 60%;
+}
+.para-desc{
+    line-height: 2.8rem;
+    width : 90%;
+}
+.main-content .box2{
+    width : 40%;
+}
+.btns{
+    /* border: 2px solid red; */
+    width : 40%;
+    display: flex;
+    /* gap : 1rem; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-content .box2{
+    /* border: 2px solid red; */
+    overflow: hidden;
+    /* height :auto; */
+    height : 40rem;
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 2rem;
+    /* width :  */
+    
+}
+.main-content .box2 img{
+    display: block;
+    width : 100%;
+    /* height: 90%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+}
+/* second page styling begins here  */
+.skills{
+    /* border: 2px solid red; */
+    padding : 2rem 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+    flex-wrap: wrap;
+}
+
+.skill-box{
+    /* border: 2px solid green; */
+    width : 30%;
+    height : 28rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.27);
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+.skill-box img{
+    /* width : 100%;*/
+    height: 100%; 
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.skill-text-box{
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50% , -50%);
+    width : 90%;
+    text-align: center;
+    margin: auto;
+    z-index: 10;
+    color : white;
+    top : -35%;
+    transition: all .4s ease-in-out;
+}
+.skill-box::after{
+    content : "";
+    display: block;
+    position: absolute;
+    top : 0;
+    /* left : 0; */
+    left : -40rem;
+    width : 100%;
+    height : 100%;
+    /* background-color: #2f3640; */
+    background-color: rgba(0, 0, 0, 0.898);
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+.skill-box:hover .skill-text-box{
+    top : 50%;
+}
+.skill-box:hover::after{
+    left : 0;
+}
+.skill-box:hover{
+    /* transform: scale(1.01); */
+    cursor: pointer;
+}
+
+
+
+/* about us ka page bro  */
+
+.about-father{
+    padding: 6em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-father .box1 , .about-father .box2{
+    width : 45%;
+    /* border: 2px solid red; */
+}
+
+.about-father .box1{
+    /* border: 2px solid red; */
+    height : 32rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    justify-content: center;
+}
+.about-father .box1 img{
+    /* width : 100%; */
+    height : 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+.about-father .box2 .my-info{
+    line-height: 2.8rem;
+}
+/* contact us page ke styling  */
+
+.contact-form{
+    padding: 4em 0;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width : 70%;
+    /* border: 2px solid red;; */
+}
+form .input-field{
+    margin-bottom: 2rem;
+    width : 100%;
+}
+::placeholder{
+    color : black;
+}
+form .input-field input , textarea{
+    display: block;
+    width : 100%;
+    border: none;
+    outline: none;
+    padding: 1.2em 1em;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.274);
+    /* border: 2px solid #474787; */
+    font-weight: 300;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #47478796; */
+    /* background-color: lightcyan; */
+    background-color: rgba(128, 128, 128, 0.032);
+    transition: all .1s ease-in-out;
+    letter-spacing: .05em;
+    color : black;
+    font-weight: 300;
+}
+form .input-field input:focus , textarea:focus{
+    border: 2px solid #474787;
+    padding: 1.3em;
+
+}
+
+form textarea{
+    height : 15rem;
+}
+/* ########################## footer styling ################### */
+.footer{
+    padding : 2em 0;
+    margin-top : auto;
+}
+.footer p{
+    width : 60%;
+    margin :auto;
+}
+
+
+
+/* ###################### responsive design ##################### */
+@media (max-width : 500px){
+    :root{
+        font-size: 8px;
+    }
+
+    .footer p{
+        width : 85%;
+    }
+    .contact-form{
+        width : 100%;
+    }
+    .contact-form form{
+        width : 100%;
+    }
+
+    .about-father{
+        flex-direction: column;
+        width : 100%;
+        height : auto;
+    }
+    .about-father .box1 , .about-father .box2{
+        /* height : auto; */
+        width : 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+        justify-content: center;
+        /* height : auto; */
+    }
+
+    .skills{
+        flex-direction: column;
+        height : auto;
+        width : 100%;
+        gap : 5rem;
+    }
+    .skills .skill-box{
+        width : 100%;
+    }
+
+    .skills .skill-box img{
+        width : 100%;
+    }
+
+    .skill-box::after{
+        left : -60rem;
+    }
+
+    .nav-bar{
+        flex-direction: column;
+    }
+
+    .nav-items{
+        /* border: 2px solid red; */
+        align-items: center;
+        justify-content: center;
+        width : 100%;
+        align-items: center;
+        gap : 5rem;
+    }
+
+    .main-content{
+        flex-direction: column;
+        width : 100%;
+        justify-content: center;
+        align-items: center;
+        height : auto;
+    }
+
+    .main-content .box1{
+        width : 100%;
+        text-align: center;
+        /* order : 1; */
+    }
+    .main-content .box1 .para-desc{
+        width : 100%;
+    }
+    .main-content .btns{
+        width : 100%;
+    }
+    .main-content .box2{
+        width : 100%;
+        height : auto;
+        margin-top : 5rem;
+        /* order : 0; */
+    }
+
+    
+}
